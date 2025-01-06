@@ -43,7 +43,7 @@
     <script class="keep-theme-configurations">
     const KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"}
-    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Jiayu Lou's Blog","author":"Jiayu Lou"},"menu":{"home":"/","archives":"/archives","tags":"/tags","categories":"/categories","photos":"/photos","about":"/about"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":null,"hitokoto":true},"social_contact":{"enable":false,"links":{"github":"https://github.com/1jiayulou","email":"ureylou@gmail.com","Leetcode":"https://leetcode.com/u/Jiayu_Lou/"}},"scroll":{"progress_bar":true,"percent":true,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["Leaner"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"waline","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":"https://8v1rkq0q.api.lncldglobal.com","reaction":true,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":1994,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[["/js/gtag.js"]]},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Jiayu Lou's Blog","author":"Jiayu Lou"},"menu":{"home":"/ || fa-solid fa-home","tags":"/tags  || fa-solid fa-tags","categories":"/categories || fa-solid fa-layer-group","links":"/links || fa-solid fa-link","photos":"/photos || fa-solid fa-image","tools":"/tools || fa-solid fa-tools","about":"/about || fa-solid fa-user-graduate"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":null,"hitokoto":true},"social_contact":{"enable":true,"links":{"github":"https://github.com/1jiayulou","email":"ureylou@gmail.com","Leetcode":"https://leetcode.com/u/Jiayu_Lou/"}},"scroll":{"progress_bar":true,"percent":true,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"created"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["Leaner"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":true,"use":"waline","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":"https://waline1-kohl.vercel.app","reaction":true,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":1994,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[["/js/gtag.js"]]},"root":"","source_data":{},"version":"4.2.5"}
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
     KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
@@ -91,6 +91,8 @@
                         <li class="menu-item flex-start border-box">
                             <a class="menu-text-color border-box" href="/">
                                 
+                                    <i class="menu-text-color menu-icon fa-solid fa-home"></i>
+                                
                                 HOME
                                 
                             </a>
@@ -99,17 +101,9 @@
                     
                         
                         <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/archives">
-                                
-                                ARCHIVES
-                                
-                            </a>
-                            
-                        </li>
-                    
-                        
-                        <li class="menu-item flex-start border-box">
                             <a class="menu-text-color border-box" href="/tags">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-tags"></i>
                                 
                                 TAGS
                                 
@@ -121,7 +115,21 @@
                         <li class="menu-item flex-start border-box">
                             <a class="menu-text-color border-box" href="/categories">
                                 
+                                    <i class="menu-text-color menu-icon fa-solid fa-layer-group"></i>
+                                
                                 CATEGORIES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/links">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-link"></i>
+                                
+                                LINKS
                                 
                             </a>
                             
@@ -131,6 +139,8 @@
                         <li class="menu-item flex-start border-box">
                             <a class="menu-text-color border-box" href="/photos">
                                 
+                                    <i class="menu-text-color menu-icon fa-solid fa-image"></i>
+                                
                                 PHOTOS
                                 
                             </a>
@@ -139,7 +149,21 @@
                     
                         
                         <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/tools">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-tools"></i>
+                                
+                                TOOLS
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
                             <a class="menu-text-color border-box" href="/about">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-user-graduate"></i>
                                 
                                 ABOUT
                                 
@@ -173,6 +197,10 @@
                     <label class="drawer-menu-label border-box">
                         <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
                             
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-home"></i>
+                                </span>
+                            
                             HOME
                         </a>
                         
@@ -183,19 +211,11 @@
                 
                 <li class="drawer-menu-item border-box not-sub-menu">
                     <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
-                            
-                            ARCHIVES
-                        </a>
-                        
-                    </label>
-                    
-                </li>
-            
-                
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
                         <a class="drawer-menu-text-color left-side flex-start border-box" href="/tags">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-tags"></i>
+                                </span>
                             
                             TAGS
                         </a>
@@ -209,7 +229,27 @@
                     <label class="drawer-menu-label border-box">
                         <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
                             
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-layer-group"></i>
+                                </span>
+                            
                             CATEGORIES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/links">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-link"></i>
+                                </span>
+                            
+                            LINKS
                         </a>
                         
                     </label>
@@ -221,6 +261,10 @@
                     <label class="drawer-menu-label border-box">
                         <a class="drawer-menu-text-color left-side flex-start border-box" href="/photos">
                             
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-image"></i>
+                                </span>
+                            
                             PHOTOS
                         </a>
                         
@@ -231,7 +275,27 @@
                 
                 <li class="drawer-menu-item border-box not-sub-menu">
                     <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/tools">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-tools"></i>
+                                </span>
+                            
+                            TOOLS
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
                         <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                </span>
                             
                             ABOUT
                         </a>
@@ -288,13 +352,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2023-05-16 08:00:00</span>
+                <span class="datetime">2023-05-16</span>
             </span>
 
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Sat Jan 04 2025 21:18:20 GMT-0800">2025-01-04 21:18:20</span>
+                    <span class="datetime" data-updated="Mon Jan 06 2025 00:48:24 GMT-0800">2025-01-06</span>
                 </span>
             
         
@@ -367,7 +431,7 @@
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_5881.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_5881.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>出了机场我们直接Hertz取车自驾，这次非常顺利，有人接待。由于后面两天一天是挪威国庆，另一天是耶稣诞辰，都是挪威的公休日，担心没有吃的，以及也为后面徒步做准备，所以先前往超市买了2000多人民币的物资吼吼吼。</p>
@@ -375,48 +439,48 @@
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_5888.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_5888.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>斯塔万格主要是作为休息点去奇迹石和布道石，加上两天都是公休日，城市也没咋逛，就去了一个我认为非常有北欧特色的小景点 —- 巨剑纪念碑 Sverd i fjell。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_5897.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_5897.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>下面👇这张是我挪威之旅最喜欢的一张照片之一，再一次，北欧的草是真的绿啊。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_5950.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_5950.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_5953.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_5953.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h2 id="Bergen-卑尔根"><a href="#Bergen-卑尔根" class="headerlink" title="Bergen 卑尔根"></a>Bergen 卑尔根</h2><p>从斯塔万格到卑尔根坐的长途巴士🚌，路途中还有两程游轮摆渡，非常有意思的一次经历。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6008.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6008.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>游轮摆渡，我们游客都非常兴奋的冲到甲板观景，其他当地居民都冲到船舱抢位子，当我们在甲板上被吹的要头疼了钻进船舱发现，好位置都没有了，哈哈哈哈</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_5996.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_5996.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>挪威的游轮非常“豪华”，船舱内非常温暖，船舱中间是一个小卖部，有卖各种零食咖啡和三明治，自助结账哦，对了，热水也是要收费的。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6006.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6006.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h2 id="Norway-in-Nutshell-挪威缩影"><a href="#Norway-in-Nutshell-挪威缩影" class="headerlink" title="Norway in Nutshell 挪威缩影"></a>Norway in Nutshell 挪威缩影</h2><p>挪威缩影其实是挪威官方规划出的一条旅游路线，连接了卑尔根和奥斯陆两大城市。基本上除了飞机，交通工具都坐了。</p>
@@ -424,42 +488,42 @@
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6022.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6022.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>到达第一站，VOSS 沃斯小镇，可惜天气不好，加上由于是一天的行程，所以特别的赶，匆匆打卡就撤了，但这小镇值得住一晚，慢慢欣赏，特别是之前心心念念想买一瓶纯正VOSS矿泉水的。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6025.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6025.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>天气不好，这也是我们本次北欧行唯一一天阴天，卑尔根不愧是雨都，旁边城市也受牵连。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6024.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6024.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>倒影，peace and beautiful</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6032.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6032.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h3 id="🚌-Gudvangen"><a href="#🚌-Gudvangen" class="headerlink" title="🚌 Gudvangen"></a>🚌 Gudvangen</h3><p>离开沃斯，换上巴士先去到一个观景台，看了最初卑尔根到奥斯陆的皇家栈道，其实也没啥，我就记得巴士上坐我前面的美国老奶奶对瀑布有迷之热爱，一看到瀑布，不论大小，都一通咔咔咔拍摄。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6038.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6038.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>到达fjord港口了，准备要换船咯，如果有时间的话，应该再预定一个皮划艇的项目，在松恩峡湾中划行一定也是一个非常不错的体验吧。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6041.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6041.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h3 id="🚢-Fjord-松恩峡湾"><a href="#🚢-Fjord-松恩峡湾" class="headerlink" title="🚢 Fjord 松恩峡湾"></a>🚢 Fjord 松恩峡湾</h3><p>怎么说呢，可能是阴天吧，没啥特别的，期望不要太高，峡湾最美的还是从上往下看。</p>
@@ -467,77 +531,77 @@
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/DJI_20230519_123040_960.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/DJI_20230519_123040_960.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h3 id="🚞-Flam-弗莱姆"><a href="#🚞-Flam-弗莱姆" class="headerlink" title="🚞 Flam 弗莱姆"></a>🚞 Flam 弗莱姆</h3><p>游船靠岸后，有两个小时等列车的时间，也算是给我们一个休息时间，有些旅游纪念品，免税店可以采购。这边主要是纪念手工打造的一条高山铁路，火车上写了 the most beautiful train in Norway 挪威是没有广告法嘛？？？</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6089.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6089.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>不像其他游客，我们对这个绿皮车是真的没啥特别感情 尴尬</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6094.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6094.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>这边有个攻略，记得抢占6号车厢，然后可以走到车厢中间这样拍照会更方便，即使没有抢到靠窗的座位也无所谓，还不用纠结左右。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6099.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6099.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>景色的话，怎么说呢，如图吧</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6102.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6102.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>开到一半会到一个瀑布，然后会有一个女生唱歌跳舞💃，为啥要坐6号车厢呢，就是这节车厢下来就是观景平台，其他没啥了。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6106.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6106.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h3 id="🚄-Finse-芬瑟"><a href="#🚄-Finse-芬瑟" class="headerlink" title="🚄 Finse 芬瑟"></a>🚄 Finse 芬瑟</h3><p>到这边发现，早上到Voss的那班火车也到这边，大家都感叹，还不如直接坐火车到奥斯陆，看来对挪威缩影还是略失望的。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6108.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6108.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>火车上看到挪威的一个滑雪🎿度假村，5月中旬积雪还是那么厚</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6116.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6116.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>出太阳啦 🌞🌞🌞 ～～～</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6118.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6118.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h2 id="Oslo-奥斯陆"><a href="#Oslo-奥斯陆" class="headerlink" title="Oslo 奥斯陆"></a>Oslo 奥斯陆</h2><p>在民宿旁边吃了奥斯陆的第一顿早饭，这里的咖啡☕️用碗喝的，也是令我吃惊。可惜这家店面包都是凉的，吃的不是很舒服。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6139.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6139.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>然后就骑上我心爱的scooter走街串巷了，奥斯陆真是雕塑之城，随便一个社区公园就看到一个大型雕塑，虽然有一点点诡异。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6140.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6140.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h3 id="Vigelandsparken-维格兰雕塑公园"><a href="#Vigelandsparken-维格兰雕塑公园" class="headerlink" title="Vigelandsparken 维格兰雕塑公园"></a>Vigelandsparken 维格兰雕塑公园</h3><p>还挺有哲理的一个雕塑公园，一共分为4组雕像。</p>
@@ -546,71 +610,71 @@
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6144.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6144.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6143.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6143.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/94560d35dd2bde1294b97132920a598f.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/94560d35dd2bde1294b97132920a598f.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>第三阶段：生命之柱。绕过生命之泉，踏上层层台阶到达生命之柱。这根高17.3米、直径3.5米、重270吨的圆形石柱耸立在椭圆形平台的中央，柱上密密麻麻交叠着雕有121个神情不同、首尾相接向上盘旋、竟相争求光明、奋力抗争不甘人下的裸体人体浮雕，四周烘托着36组花岗石人体雕像，以表现尘世的悲欢而与天堂对照。因此也称“人生柱”。这是公园里人物最多也最具有震撼力的一组雕塑，是公园的制高点，由三位工匠历经14年完成。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/f5b77fd5b9e16d3a3677c6082b7df512.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/f5b77fd5b9e16d3a3677c6082b7df512.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/fda6e93231a29984bbede37fcdc3e9b9.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/fda6e93231a29984bbede37fcdc3e9b9.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h3 id="Det-kongelige-slott-奥斯陆皇宫"><a href="#Det-kongelige-slott-奥斯陆皇宫" class="headerlink" title="Det kongelige slott 奥斯陆皇宫"></a>Det kongelige slott 奥斯陆皇宫</h3><p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/d7694a60b01358cec1bfa9ee5fb7afbd.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/d7694a60b01358cec1bfa9ee5fb7afbd.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6149.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6149.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>晒太阳的鸭鸭🦆</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6151.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6151.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>民宿房东给了我们一面挪威国旗，配合红色卫衣，红红火火～</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/9793fe4cee3e93da56564c226212f019.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/9793fe4cee3e93da56564c226212f019.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h3 id="Comic-Book-Store-桌游店"><a href="#Comic-Book-Store-桌游店" class="headerlink" title="Comic Book Store 桌游店"></a>Comic Book Store 桌游店</h3><p>对漫画桌游店的印象都来自于生活大爆炸，也是第一次看到线下对战，好像是war3的卡牌游戏。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6166.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6166.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h3 id="Munch-Museum-蒙克美术馆"><a href="#Munch-Museum-蒙克美术馆" class="headerlink" title="Munch Museum 蒙克美术馆"></a>Munch Museum 蒙克美术馆</h3><p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6167.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6167.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>其实我是到了才知道，这个美术馆里面存放了世界名画《呐喊》，然后也是进了博物馆才知道，呐喊一共有三个版本，每个小时会换一副，不过我只看到了两幅。</p>
@@ -618,79 +682,79 @@
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6169.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6169.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6170.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6170.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6172.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6172.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h3 id="Operahuset-Oslo-奥斯陆歌剧院"><a href="#Operahuset-Oslo-奥斯陆歌剧院" class="headerlink" title="Operahuset Oslo 奥斯陆歌剧院"></a>Operahuset Oslo 奥斯陆歌剧院</h3><p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6191.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6191.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6177.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6177.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6190.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6190.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <h3 id="Food-吃"><a href="#Food-吃" class="headerlink" title="Food 吃"></a>Food 吃</h3><p>我虽然不是一个吃货，但这个青口贝是我本次北欧行程最最最最喜欢的一道菜，食材特别新鲜，绝美。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6158.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6158.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>生蚝🦪和烤鱼🐟也不错，但是，和青口贝比起来还差一点点。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6160.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6160.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>周末奥斯陆的市场</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6161.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6161.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>小红书上挪威网红巧克力牛奶，就巧克力牛奶。</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6181.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6181.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>奥斯陆歌剧院附近的冰激凌</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6176.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6176.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <p>整个旅程买了好多矿泉水瓶，直到最后一晚才体验了一下回收返现，一个矿泉水瓶可以返3克朗，可以直接当钱用，你肯定会问，那是不是靠捡瓶子可以发财？没错，奥斯陆真的有好些捡瓶子的homeless，特别是歌剧院附近，但是发财是不可能的，杯水车薪啊</p>
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="https://ureylou-blog.oss-accelerate.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6180.jpeg?x-oss-process=style/simplify"
+                       data-src="https://ureylou-blog.oss-cn-hongkong.aliyuncs.com/2023-Northern-Europe-Trip-Part4-Stavanger-Bergen-Oslo/IMG_6180.jpeg?x-oss-process=style/simplify"
                        
                  ></p>
 <!--more-->
@@ -882,6 +946,84 @@
                     
 
 
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;Comments
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">Loading comment plugin</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="waline-comment-container">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@waline/client@v3.2.1/dist/waline.css"/>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@waline/client@v3.2.1/dist/waline-meta.css"/>
+        <div id="waline-comment"></div>
+        <script data-pjax>
+          window.KeepCommentPlugin.walineOptions = JSON.parse('{}'.replace(/&#34;/g, '"'))
+          window.KeepCommentPlugin.walineOptions.el = '#waline-comment'
+          window.KeepCommentPlugin.walineOptions.comment = '.post-comments-count'
+          window.KeepCommentPlugin.walineOptions.serverURL = 'https://waline1-kohl.vercel.app'
+          window.KeepCommentPlugin.walineOptions.lang = 'en' || 'zh-CN'
+          window.KeepCommentPlugin.walineOptions.reaction = 'true' === 'true'
+        </script>
+
+        
+
+        
+            <script data-pjax
+                    async
+                    type="module"
+            >
+              import { init } from '//cdn.jsdelivr.net/npm/@waline/client@v3.2.1/dist/waline.js'
+              window.KeepCommentPlugin.initWaline = () => {
+                if (init) {
+                  init(window.KeepCommentPlugin.walineOptions)
+                  window.KeepCommentPlugin.hideLoading()
+                } else {
+                  setTimeout(() => {
+                    window.KeepCommentPlugin.initWaline()
+                  }, 1000)
+                }
+              }
+
+              if ('true' === 'true') {
+                setTimeout(() => {
+                  window.KeepCommentPlugin.initWaline()
+                }, 1200)
+              } else {
+                window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initWaline)
+              }
+            </script>
+        
+    </div>
+
+
+        
+    </div>
+
 
 
 
@@ -967,6 +1109,11 @@
 
         <!-- PC go comment -->
         
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
 
         <!-- PC full screen -->
         <li class="tools-item flex-center full-screen">
@@ -1013,6 +1160,10 @@
             </li>
         
 
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
         
 
         <li class="tools-item tool-toggle-show flex-center">
