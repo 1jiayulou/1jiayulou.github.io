@@ -19,7 +19,7 @@
     
     <title>
         
-            Tag: china |
+            Mathematics foundation of reinforcement learning - Part 2 强化学习笔记2 |
         
         Keep Theme
     </title>
@@ -162,39 +162,79 @@
             <div class="main-content border-box">
                 
 
-                    <div class="fade-in-down-animation">
-    <div class="tag-archive-container border-box">
-        <div class="tag-name"><i class="fas fa-hashtag"></i>&nbsp;china
-        </div>
-        <div class="tag-post-list">
-            
-<div class="archive-list-container border-box">
-    
-        <section class="archive-item border-box">
-            <div class="archive-item-header border-box">
-                <span class="archive-year">2023</span>
-            </div>
-            <ul class="archive-item-body border-box">
-                
-                    <li class="post-item border-box">
-                        <span class="starting-point border-box flex-center"></span>
-                        <span class="post-date border-box">06-09</span>
-                        <a class="post-title border-box text-ellipsis"
-                           href="/2023/06/09/%5BSuccess%5D%202023%20-%20Mt.WuGong%20Trail%20%E6%AD%A6%E5%8A%9F%E5%B1%B1%E5%8F%8D%E7%A9%BF/"
-                        >[Success] 2023 - Mt.WuGong Trail 武功山反穿</a>
-                    </li>
-                
-            </ul>
-        </section>
-    
-</div>
+                    
 
+<div class="fade-in-down-animation">
+    <div class="page-template-container border-box keep-container ">
+        <!-- page top -->
+        
+
+        <!-- page bottom -->
+        <div class="page-template-bottom border-box">
+            <!-- use page template -->
+            
+
+            <!-- page content -->
+            <div class="page-content border-box keep-markdown-body ">
+                
+                    <h1 id="Mathematics-foundation-of-reinforcement-learning-Part-2-强化学习笔记2"><a href="#Mathematics-foundation-of-reinforcement-learning-Part-2-强化学习笔记2" class="headerlink" title="Mathematics foundation of reinforcement learning - Part 2 强化学习笔记2"></a>Mathematics foundation of reinforcement learning - Part 2 强化学习笔记2</h1><h2 id="Syllabus"><a href="#Syllabus" class="headerlink" title="Syllabus"></a>Syllabus</h2><p><img   src="https://raw.githubusercontent.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning/refs/heads/main/Figure_chapterMap.png" ></p>
+<p>Chapter 5: Monte Carlo Method</p>
+<h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><p>还是那句话，不要慌，听上去很唬人，看上去很复杂的公式，其实都是common sense。</p>
+<h3 id="Model-Based-Model-Free"><a href="#Model-Based-Model-Free" class="headerlink" title="Model Based &amp; Model Free"></a>Model Based &amp; Model Free</h3><p>什么是model based，就是对每个状态可以使用函数f(x)计算其状态价值的就是model based。</p>
+<p>那么Model Free，就是没有或者不能用函数计算的那就是model free。</p>
+<h3 id="Mean-Estimation-（期望值计算）"><a href="#Mean-Estimation-（期望值计算）" class="headerlink" title="Mean Estimation （期望值计算）"></a>Mean Estimation （期望值计算）</h3><p>对于 model based，如何计算期望呢？显然，可以通过 状态操作值 ✖ 概率 累加求得</p>
+<p>$$<br>E[X] &#x3D; \Sigma_{x \cap X} p(x)*f(x)<br>$$</p>
+<p>那么对于 model free呢，由于没有了函数f(x)，所以没有办法直接获取状态操作值。<br>我们只能通过大量的样本sample {x1, x2, x3, …} 取平均求得期望值</p>
+<p>$$<br>E[x] \approx \frac{1}{n} \Sigma_{j&#x3D;1}^{n}x_j<br>$$</p>
+<p>当n趋向于无穷大时，取等号。这个由 大数定理(the law of large numbers) 保证。</p>
+<h2 id="Monte-Carlo"><a href="#Monte-Carlo" class="headerlink" title="Monte Carlo"></a>Monte Carlo</h2><p>有了以上了解，那就可以来看蒙特卡洛算法了。是不是很common sense，没啥复杂的数学要求。</p>
+<p>回顾 policy iteratioin 策略迭代算法，为什么不是 值迭代，因为蒙特卡洛算法主要用于model free的场景，而值迭代算法是通过更新 所有状态 所有操作来逼近最优价值，对于model free场景，这个很难获取到，例如在俄罗斯方块游戏中，虽然可以建模但是需要的空间巨大，且难以实现。</p>
+<p>关键点在于，蒙特卡洛算法不需要知道状态转移概率，只需要知道与环境实际交互的数据即可，这个更适用于一般场景。</p>
+<p>策略迭代第一步，策略评估，根据当前策略，计算出能获得的奖励期望值</p>
+<p>$$<br>q_{π_k}(s,a) &#x3D; \Sigma_{r}p(r|s,a) * r + γ * \Sigma_{s’}p(s’|s, a) * v_{π_k}(s’)<br>$$</p>
+<p>那么，当没有模型时，这个p(r|s,a), p(s’|s,a)是不知道的，所以回到定义</p>
+<p>$$<br>\begin{align}<br>q_{π_k}(s,a) &amp;&#x3D; \mathbb{E}[G_t | S_t &#x3D; s, A_t &#x3D; a] \<br>&amp;&#x3D; \mathbb{E}[R_{t+1} + γ * R_{t+2} + γ^2*R_{t+3}+ … | S_t &#x3D; s, A_t &#x3D; a]<br>\end{align}<br>$$</p>
+<p>对于这个期望值，我们可以使用取平均值的方法计算，怎么理解呢，即对(s,a) 状态 s，执行操作 a 后，开始模拟，获取<strong>尽可能多</strong>的路径，求每天路径的值，再去平均值，最终得到这个策略评估函数值。</p>
+<p>第二步，策略优化，这个还是和上一步一致，在当前策略模拟基础上，使用greedy 贪心获得能获取最大收益的操作值，进行策略更新，然后进行下一步迭代。所以，这个也叫蒙特卡洛贪心算法。</p>
+<h3 id="Monto-Calro-e-greedy-Policies"><a href="#Monto-Calro-e-greedy-Policies" class="headerlink" title="Monto Calro e-greedy Policies"></a>Monto Calro e-greedy Policies</h3><p>有了基本概念，那下一步就是要将这个算法工程化了，算法简单来说分几步</p>
+<ol>
+<li><p><strong>随机策略</strong>（在我们这个迷宫例子中，则表现为随机一条长度为maxStep的路径）</p>
+<ul>
+<li><p>这里为了能更好的收敛结果，使用随机因子epsilon</p>
+<p>$$<br>\pi(a|s) &#x3D;<br>\begin{cases}<br>1 - \frac{\epsilon}{|A(s)|}(|A(s)|-1), &amp; \text{if } a \text{ is the greedy action,} \<br>\frac{\epsilon}{|A(s)|}, &amp; \text{otherwise.}<br>\end{cases}<br>$$</p>
+</li>
+<li><p>可以理解为当 ϵ &#x3D; 1 时，为最公平算法，当ϵ &#x3D; 0 时，为最贪心算法</p>
+</li>
+<li><p>代码实现中，初始化 ϵ&#x3D;1，然后使用随机值 Math.random() &lt; ϵ ，则操作为选取BestPolicy(s) ，反之取随机值。</p>
+</li>
+<li><p>为了让算法高效，可以逐渐收敛ϵ，例如每一次迭代完成，ϵ &#x3D; 0.99 * ϵ。最终 ϵ -&gt; 0。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>评估策略</strong></p>
+<ul>
+<li>根据第一步的策略，可以不断获取每一步的 <strong>即时奖励</strong> 值。</li>
+<li>利用 公式(5) ，我们需要 <strong>从后往前</strong> 计算，G(s,a) 的 <strong>累积奖励</strong> 值</li>
+<li>然后 更新 G(s,a) 的期望值。</li>
+</ul>
+</li>
+<li><p><strong>更新策略</strong></p>
+<ul>
+<li>通过不断迭代，会获得不同状态 s 下，各个动作 a 的累积奖励期望值</li>
+<li>能获得最大累积奖励的操作 a 的值设定为 bestPolicy。当然，这个是临时的bestPolicy</li>
+</ul>
+</li>
+<li><p>判断是否到达终止条件，没有则继续迭代</p>
+</li>
+</ol>
+
+                
+            </div>
+
+            <!-- comment plugin -->
+            
         </div>
     </div>
-    
-
-
-
 </div>
 
 
@@ -287,7 +327,6 @@
     <!-- tablet toc -->
     
 </main>
-
 
 
 
